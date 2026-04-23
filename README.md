@@ -30,7 +30,6 @@
 - [Reproducibility](#-reproducibility)
 - [Contributing](#-contributing)
 - [License](#-license)
-- [Citation](#-citation)
 - [Acknowledgements](#-acknowledgements)
 - [Author](#-author)
 - [Future Work](#-future-work)
