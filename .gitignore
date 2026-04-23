@@ -1,0 +1,10 @@
+# Python rác
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# Kết quả thực nghiệm
+results/TEMP_RES_*.csv
+results/*.png
