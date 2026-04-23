@@ -169,7 +169,10 @@ Users must comply with:
 ---
 ## 👨‍💻 Author
 ### HUIT Research Team
-- Lead Developer: [Your Name/Team Member Name]
+- Lead Developer: 
+  1. Le Hoang Minh Nhat
+  2. Bach Ngoc Vy
+  3. Phung Thi Ly
 - Contact: bachngocvy25112005@gmail.com
 ---
 ## 🌟 Future Work
