@@ -73,22 +73,36 @@ Traditional data anonymization methods often suffer from:
 
 ```
 📂 ANONYMIX_PROJECT
-├── 📂 data/                   # Dataset & Ontology Management
-│   ├── 📂 adult/, 📂 cmc/ ... # Benchmark Datasets
-│   └── 📂 medical/            # Synthetic Medical Data
-│       ├── 📂 hierarchies/    # Hierarchy CSV files
-│       ├── medical.csv        # Raw dataset
-│       ├── medical_train.txt  # Training indices
-│       └── medical_test.txt   # Test indices
-├── 📂 pages/                  # Streamlit Multi-page UI
-├── 📂 results/                # CSV Logs & Generated Plots
-├── app.py                     # Main Entry Point
-├── aro_apo_optimizer.py       # Core Hybrid Algorithm
-├── anonymizer.py              # K-Anonymity & L-Diversity Logic
-├── classifier.py              # Utility Evaluation (Random Forest)
-├── config.py                  # System & Fitness Parameters
-├── run_parallel.py            # Multiprocessing trial engine
-└── visualize.py               # Research-grade plotting engine
+├── 📂 data/                        # Quản lý dữ liệu và cấu trúc phân cấp (Ontology)
+│   ├── 📂 adult/, 📂 cmc/, ...      # Các bộ dữ liệu chuẩn (Benchmarks)
+│   └── 📂 medical/                 # Bộ dữ liệu y tế tổng hợp
+│       ├── 📂 hierarchies/         # Chứa các file .csv định nghĩa cây phân cấp
+│       ├── medical.csv             # Dữ liệu thô (Raw data)
+│       ├── medical_train.txt       # Chỉ số dữ liệu huấn luyện
+│       └── medical_test.txt        # Chỉ số dữ liệu kiểm thử
+├── 📂 pages/                       # Giao diện đa trang của Streamlit
+│   ├── 1_Trang_Chu.py              # Giới thiệu dự án và điều khoản
+│   ├── 2_Thuc_Nghiem.py            # Giao diện điều khiển chạy thuật toán
+│   └── 3_Bao_Cao.py                # Hiển thị biểu đồ và bảng kết quả
+├── 📂 results/                     # Lưu trữ nhật ký (Logs) và biểu đồ xuất ra
+│   ├── MASTER_RAW_ALL_DATASETS.csv  # Tổng hợp kết quả thô của tất cả dataset
+│   ├── MASTER_SUMMARY_ALL.csv      # Bảng thống kê Mean ± Std
+│   └── ALL_IN_ONE_Convergence.png  # Biểu đồ hội tụ tổng hợp
+├── app.py                          # File chạy chính (Điều hướng tới Trang Chủ)
+├── config.py                       # Cấu hình tham số hệ thống và trọng số Fitness
+├── aro_apo_optimizer.py            # Thuật toán lai ARO-APO (Core)
+├── anonymizer.py                   # Logic K-Anonymity và Recursive (c,l)-Diversity
+├── classifier.py                   # Đánh giá độ chính xác bằng Random Forest
+├── hierarchy_loader.py             # Bộ nạp và xử lý cây phân cấp dữ liệu
+├── utils.py                        # Chứa thuật toán GA, PSO và hàm Fitness chung
+├── main.py                         # Giao diện dòng lệnh (CLI) để chạy nhanh
+├── run_batch.py                    # Engine chạy thử nghiệm hàng loạt (Batch processing)
+├── run_parallel.py                 # Xử lý song song đa luồng (Multiprocessing)
+├── bridge_runner.py                # Cầu nối gọi lệnh hệ thống từ giao diện Web
+├── update_results_logic.py         # Logic tự động gộp dữ liệu và cập nhật báo cáo
+├── visualize.py                    # Vẽ biểu đồ nghiên cứu (Boxplot, Line chart)
+├── Gen_Synthetic_Data.py           # Script khởi tạo 50,000 dòng dữ liệu y tế
+└── .gitignore                      # Cấu hình loại bỏ các file rác khi đẩy lên Git
 ```
 ## ⚙️ System Workflow
 ### Optimization Function
